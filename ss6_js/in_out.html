@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let math = +prompt("Nhập điểm Toán: ", "9");
+    let english = +prompt("Nhập điểm Anh: ", "9");
+    let literature = +prompt("Nhập điểm Văn: ", "9");
+    let sum = (math + english + literature);
+    let avg = sum/3;
+    // template string (2015)
+    document.writeln(`Điểm trung bình là ${avg}.`)
+</script>
+</body>
+</html>
