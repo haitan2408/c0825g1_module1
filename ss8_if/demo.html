@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let month = +prompt("Mời bạn nhập tháng");
+    while(!Number.isInteger(month) || month <= 0 || month > 12) {
+        alert("Tháng phải là số nguyên và nằm trong  khoảng từ 1 đến 12.")
+        month = +prompt("Mời bạn nhập lại tháng: ");
+    }
+
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            alert(`Tháng ${month} có 31 ngày`);
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            alert(`Tháng ${month} có 30 ngày`);
+            break;
+        case 2:
+            alert(`Tháng ${month} có 28 hoặc 29 ngày`);
+            break;
+        default:
+            alert("Sai thông tin")
+    }
+
+    // (username === "haitt")? (password === "admin"?alert("Chào bạn"): alert("Sai password")): alert("")
+</script>
+</body>
+</html>
