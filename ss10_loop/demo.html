@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // let username;
+  // do {
+  //   username = prompt("Mời bạn nhập username: ")
+  //   if(username === "") {
+  //     alert("Username không để trống")
+  //   }
+  // } while (username === "")
+
+  let  username = prompt("Mời bạn nhập username: ");
+  while (username === "") {
+    alert("Username không để trống")
+    username = prompt("Mời bạn nhập username: ")
+  }
+
+  for(let i =1; i <10; i++) {
+    if(i ===5) {
+      continue;
+    }
+    console.log(i)
+
+  }
+  let i = 1;
+  while(i < 10) {
+    if(i ===5) {
+      continue;
+    }
+    console.log(i)
+    i++;
+
+  }
+  // <table>
+  // for() {
+  //   <tr>
+  //   for() {
+  //     <td></td>
+  //   }
+  //   </tr>
+  // }
+  // </table>
+  document.writeln("<table></table>")
+</script>
+</body>
+</html>
