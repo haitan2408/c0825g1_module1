@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        td {
+            width: 50px;
+            border: 1px solid black;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="result"></div>
+<script>
+
+    const initMatrix = (table, x, y) => {
+        for (let i = 0; i < x; i++) {
+            table[i] = [];
+            for (let j = 0; j < y; j++) {
+                table[i][j] = "";
+            }
+        }
+    }
+
+    const displayTableCaro = (table) => {
+        let display = "<table>"
+        for (let i = 0; i < table.length; i++) {
+            display += "<tr>"
+            for (let j = 0; j < table[i].length; j++) {
+                display += `<td onclick="changeValue(${i}, ${j})">${table[i][j]}</td>`
+            }
+            display += "</tr>"
+        }
+        display += "</table>"
+        document.getElementById("result").innerHTML = display;
+    }
+
+    const isWin = (table) => {
+
+    }
+
+    const changeValue = (x, y) => {
+        if (table[x][y] === "") {
+            if (isX) {
+                table[x][y] = "X";
+            } else {
+                table[x][y] = "O";
+            }
+            isX = !isX;
+            displayTableCaro(table);
+            isWin(table);
+        }
+
+    }
+    let isX = true;
+    let table = [];
+    initMatrix(table, 20, 20);
+    displayTableCaro(table);
+</script>
+</body>
+</html>
